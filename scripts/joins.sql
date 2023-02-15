@@ -84,6 +84,7 @@ GROUP BY d.company_name
 ORDER BY total_movies DESC;
 
 
+
 -- 5. Write a query that returns the five distributors with the highest average movie budget.
 
 SELECT d.company_name, ROUND(AVG(r.film_budget),1) as avg_budget
