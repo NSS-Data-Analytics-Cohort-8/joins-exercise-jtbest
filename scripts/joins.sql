@@ -105,9 +105,9 @@ INNER JOIN specs as s
 ON d.distributor_id = s.domestic_distributor_id
 INNER JOIN rating as r
 ON s.movie_id = r.movie_id
-WHERE d.headquarters NOT LIKE 'CA';
+WHERE d.headquarters NOT LIKE '%CA%';
 
---	419 movies
+--	2 movies
 
 SELECT s.film_title
 FROM distributors as d
@@ -115,11 +115,11 @@ INNER JOIN specs as s
 ON d.distributor_id = s.domestic_distributor_id
 INNER JOIN rating as r
 ON s.movie_id = r.movie_id
-WHERE d.headquarters NOT LIKE 'CA'
+WHERE d.headquarters NOT LIKE '%CA%'
 ORDER BY r.imdb_rating DESC
 LIMIT 1;
 
---	The Dark Knight
+--	Dirty Dancing
 
 -- 7. Which have a higher average rating, movies which are over two hours long or movies which are under two hours?
 
